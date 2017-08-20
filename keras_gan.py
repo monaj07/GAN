@@ -136,7 +136,7 @@ def main():
     #####################################
     model_D.trainable = False # Since model_D is already compiled, thediscriminator model remains trainble, 
     # but here in the combined model it becomes non-trainable
-    input_main = Input(shape=(LATENT_SIZE,), name='input_main')
+    input_main = Input(shape=(LATENT_SIZE,), name='input_main') # Note that this input should be different from the input to Generator
     combined = Model(inputs=input_main, outputs=model_D(model_G(input_main)))
     combined.compile(loss='binary_crossentropy', optimizer=tf.train.AdamOptimizer(learning_rate=adam_lr, beta1=adam_beta_1), metrics=['accuracy'])
 
