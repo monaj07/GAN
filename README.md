@@ -1,5 +1,7 @@
 # README #
 
+Please Refer to https://github.com/soumith/ganhacks for important tips and tricks.
+
 ### What is this repository for? ###
 
 * I am going to implement a simple GAN both in Keras and Tensorflow.
@@ -13,3 +15,5 @@
 * Next the generator is trained for one iteration, given the updated discriminator. 
   Then we go back to retraining the discriminator, given the updated generator. 
   This goes on and on and on, until the discriminator can not distinguish well between fake and real images.
+
+
