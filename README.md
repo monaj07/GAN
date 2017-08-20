@@ -1,6 +1,8 @@
 # README #
 
-Please Refer to https://github.com/soumith/ganhacks for important tips and tricks.
+Please Refer to https://github.com/soumith/ganhacks for important tips and tricks .
+Also read http://guimperarnau.com/blog/2017/03/Fantastic-GANs-and-where-to-find-them .
+This is a simple vanilla GAN and is not as good as DCGAN which is normally used as a baseline.
 
 ### What is this repository for? ###
 
