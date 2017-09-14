@@ -150,7 +150,6 @@ def main():
     for iter in range(100):
         fake_input = np.random.randn(1, LATENT_SIZE)
         fake_image = model_G.predict(fake_input)
-        pdb.set_trace()
         loss_G, acc_G, loss_D, acc_D = 0, 0, 0, 0
         steps = (int)(np.ceil(float(N)/float(BATCH_SIZE)))
         for batch_iter in range(steps):
@@ -183,6 +182,11 @@ def main():
             acc_G  += tr[1]
         print('\nG_loss = {}, G_acc = {}\nD_loss = {}, D_acc = {}'.format(loss_G/float(steps), acc_G/float(steps), loss_D/float(steps), acc_D/float(steps)))
 
+    for iter in range(10):
+        fake_input = np.random.randn(1, LATENT_SIZE)
+        fake_image = model_G.predict(fake_input)
+        plt.imshow(fake_image[0,:,:,0])
+        plt.show()
 
 if __name__ == '__main__':
     main()
